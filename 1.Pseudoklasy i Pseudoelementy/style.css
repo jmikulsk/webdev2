@@ -1,0 +1,20 @@
+.link:link{
+color: green;
+
+}
+.link:hover{
+    color: red;
+
+}
+.link:visited{
+    color: yellow;
+}
+.text{
+    width: 400px;
+}
+.text::first-letter{
+    font-size: 50px;
+}
+.text::first-line {
+    color: red;
+}
