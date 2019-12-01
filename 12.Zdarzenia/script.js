@@ -19,4 +19,25 @@ window.onload =function () {
     })
 
 
+    let button = document.getElementById('add-element');
+    let boxContainer = document.getElementById('box-container');
+    let licznik =1;
+    button.addEventListener('click', function () {
+        let nowyElement = document.createElement('div');
+        nowyElement.classList.add('box');
+        nowyElement.textContent=licznik;
+        ++licznik;
+        boxContainer.appendChild(nowyElement);
+
+    });
+    boxContainer.addEventListener('click',function (e) {
+        console.log(e);
+        if(e.target.className.includes('box')){
+            this.removeChild(e.target);
+            // e.target.style.border='5px solid blue'
+            licznik--;
+        }
+
+    })
+
 }
